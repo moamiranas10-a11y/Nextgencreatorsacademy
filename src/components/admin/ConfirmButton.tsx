@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-import { Loader2 } from "lucide-react";
+import { Loader2, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function ConfirmButton({
@@ -21,7 +21,7 @@ export default function ConfirmButton({
   confirmText?: string;
   successText?: string;
   label?: string;
-  icon?: React.ComponentType<{ size?: number }>;
+  icon?: LucideIcon;
   className?: string;
   body?: Record<string, unknown>;
 }) {
