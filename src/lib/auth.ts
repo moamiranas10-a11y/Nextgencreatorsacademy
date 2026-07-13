@@ -1,4 +1,3 @@
-import { PrismaAdapter } from "@auth/prisma-adapter";
 import type { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
@@ -8,7 +7,6 @@ import { loginSchema } from "@/lib/validations";
 // Local, database-backed authentication only.
 // No external OAuth or paid identity provider required.
 export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
   session: {
     strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60, // 30 days
